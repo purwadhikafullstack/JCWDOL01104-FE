@@ -52,7 +52,7 @@ const Profile = () => {
       toast.success("Sukses Upload Gambar");
     }
     if (isError) {
-      toast.success("Gagal Upload Gambar");
+      toast.error("Gagal Upload Gambar");
     }
     refetch();
   }, [isSuccess, isError, rand]);

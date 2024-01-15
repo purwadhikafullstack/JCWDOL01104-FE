@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registeSchema } from "@/lib/schema";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import { useEffect } from "react";
 import { usePostApi } from "@/lib/service";
 import { Separator } from "../ui/separator";
@@ -55,8 +55,6 @@ const Register = () => {
 
   return (
     <div>
-      <Toaster richColors expand={false} />
-
       <div className="space-y-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit, (err) => console.log(err))} className="space-y-4">
